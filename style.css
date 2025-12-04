@@ -53,6 +53,26 @@ nav a:hover {
   color: goldenrod;
 }
 
+/* responsive nav layout */
+nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.6rem 4%;
+  }
+  nav {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  nav a { margin-left: 0; }
+}
+
 /* Hero */
 .hero {
   height: 95vh;
@@ -256,4 +276,118 @@ canvas {
   left: 0;
   pointer-events: none;
   z-index: 999;
+}
+/* ------------------------------------------- */
+/* GLOBAL RESPONSIVE FIXES */
+/* ------------------------------------------- */
+
+@media (max-width: 900px) {
+  .hero-content h2 {
+    font-size: 3.5rem;
+  }
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+  .btn {
+    margin-top: 3rem;
+    padding: 0 1.5rem;
+  }
+}
+
+/* Tablets & small laptops */
+@media (max-width: 768px) {
+
+  .hero {
+    height: 80vh;
+    padding: 0 1rem;
+  }
+
+  .hero-content {
+    transform: translateY(-3vh);
+  }
+
+  .hero-content h2 {
+    font-size: 3rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+}
+
+/* ------------------------------------------- */
+/* MOBILE PHONES (under ~600px) */
+/* ------------------------------------------- */
+@media (max-width: 600px) {
+  
+  /* Header adjusts neatly */
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.7rem 5%;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 0.5rem;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+  }
+
+  /* Hero text scales down */
+  .hero-content h2 {
+    font-size: 2.3rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .btn {
+    height: 48px;
+    line-height: 48px;
+    margin-top: 2rem;
+  }
+
+  /* Section spacing scaled down */
+  .section {
+    padding: 4rem 5%;
+  }
+
+  /* Product cards stacked nicely */
+  .product-card {
+    padding: 0.6rem;
+  }
+
+  .product-card h3 {
+    font-size: 1.1rem;
+  }
+
+  /* Images never overflow */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Form fields */
+  .newsletter-section input[type="email"] {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .newsletter-section button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ------------------------------------------- */
+/* VERY SMALL DEVICES (under ~390px) */
+/* ------------------------------------------- */
+@media (max-width: 390px) {
+  .hero-content h2 { font-size: 2rem; }
+  .hero-content p { font-size: 0.9rem; }
 }
