@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let particles = [];
 
-  // Create a sparkle particle
   function createParticle(x, y) {
     return {
       x,
@@ -28,7 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   }
 
-  // Initial floating sparkles in top corners
   function initSparkles() {
     for (let i = 0; i < 50; i++) {
       particles.push(createParticle(Math.random() * 150, Math.random() * 150));
@@ -37,7 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   initSparkles();
 
-  // Mouse-following sparkles (general)
   window.addEventListener('mousemove', (e) => {
     for (let i = 0; i < 2; i++) {
       const offsetX = Math.random() * 10 - 5;
@@ -46,7 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Animate sparkles
   function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -68,18 +64,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   animate();
 
-  // Resize canvas
   window.addEventListener('resize', () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
   });
 
-  // Product hover sparkles
   const productCards = document.querySelectorAll('.product-card');
   productCards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
       for (let i = 0; i < 5; i++) {
-        const rect = card.getBoundingClientRect();
         const x = e.clientX + (Math.random() * 20 - 10);
         const y = e.clientY + (Math.random() * 20 - 10);
         particles.push(createParticle(x, y));
@@ -87,7 +80,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Load product button images (use local if present, otherwise fallback)
   const productBtns = document.querySelectorAll('.product-btn');
   productBtns.forEach(btn => {
     const local = btn.getAttribute('data-local');

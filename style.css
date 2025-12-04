@@ -15,11 +15,6 @@ body {
 
 /* CSS variables for easy theming */
 :root {
-  /* Change this to a different image URL or a local path.
-     Examples:
-       External URL: url('https://example.com/myimage.jpg')
-       Local file:   url('images/hero.jpg')  (place file in `images/` folder)
-  */
   --hero-bg: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80');
 }
 
@@ -83,24 +78,20 @@ nav {
   background: url('images/backgroundimage.jpg') no-repeat center/cover;
 }
 
-
 .hero-content h2 {
   font-family: 'Great Vibes', cursive;
-  font-size: 5rem;
+  font-size: clamp(2rem, 6vw, 4.2rem);
   color: black;
   text-shadow: 0 0 8px #f5f5dc;
 }
 
 .hero-content p {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 3vw, 1.6rem);
   margin: 1rem 0;
   color: black;
   text-shadow: 0 0 8px white;
 }
 
-
-
-/* Move hero heading/paragraph up slightly for better visual balance */
 .hero-content {
   transform: translateY(-9vh);
   transition: transform 0.25s ease;
@@ -123,7 +114,7 @@ nav {
   transition: transform 0.3s ease;
   display: inline-flex;
   height: 56px;
-  line-height: 56px; /* centers single-line text */
+  line-height: 56px;
   padding: 0 2rem;
   margin-top: 9rem;
 }
@@ -177,7 +168,7 @@ nav {
   border-radius: 12px;
 }
 
-/* Product button that uses an image as its background */
+/* Product button background */
 .product-card a.product-btn {
   display: block;
   width: 100%;
@@ -207,7 +198,6 @@ nav {
   z-index: 2;
 }
 
-/* Small screens: make product button a bit taller to show image */
 @media (max-width: 480px) {
   .product-card a.product-btn { height: 260px; }
 }
@@ -269,125 +259,11 @@ nav {
   margin-top: 3rem;
 }
 
-/* Canvas sparkles on top layer */
+/* Canvas sparkles */
 canvas {
   position: fixed;
   top: 0;
   left: 0;
   pointer-events: none;
   z-index: 999;
-}
-/* ------------------------------------------- */
-/* GLOBAL RESPONSIVE FIXES */
-/* ------------------------------------------- */
-
-@media (max-width: 900px) {
-  .hero-content h2 {
-    font-size: 3.5rem;
-  }
-  .hero-content p {
-    font-size: 1.2rem;
-  }
-  .btn {
-    margin-top: 3rem;
-    padding: 0 1.5rem;
-  }
-}
-
-/* Tablets & small laptops */
-@media (max-width: 768px) {
-
-  .hero {
-    height: 80vh;
-    padding: 0 1rem;
-  }
-
-  .hero-content {
-    transform: translateY(-3vh);
-  }
-
-  .hero-content h2 {
-    font-size: 3rem;
-  }
-
-  nav a {
-    font-size: 0.9rem;
-  }
-}
-
-/* ------------------------------------------- */
-/* MOBILE PHONES (under ~600px) */
-/* ------------------------------------------- */
-@media (max-width: 600px) {
-  
-  /* Header adjusts neatly */
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0.7rem 5%;
-  }
-
-  nav {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.7rem;
-    margin-top: 0.5rem;
-  }
-
-  .logo {
-    font-size: 1.8rem;
-  }
-
-  /* Hero text scales down */
-  .hero-content h2 {
-    font-size: 2.3rem;
-  }
-  .hero-content p {
-    font-size: 1rem;
-  }
-  .btn {
-    height: 48px;
-    line-height: 48px;
-    margin-top: 2rem;
-  }
-
-  /* Section spacing scaled down */
-  .section {
-    padding: 4rem 5%;
-  }
-
-  /* Product cards stacked nicely */
-  .product-card {
-    padding: 0.6rem;
-  }
-
-  .product-card h3 {
-    font-size: 1.1rem;
-  }
-
-  /* Images never overflow */
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  /* Form fields */
-  .newsletter-section input[type="email"] {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-
-  .newsletter-section button {
-    width: 100%;
-    justify-content: center;
-  }
-}
-
-/* ------------------------------------------- */
-/* VERY SMALL DEVICES (under ~390px) */
-/* ------------------------------------------- */
-@media (max-width: 390px) {
-  .hero-content h2 { font-size: 2rem; }
-  .hero-content p { font-size: 0.9rem; }
 }
