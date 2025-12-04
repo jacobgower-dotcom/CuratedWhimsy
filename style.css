@@ -1,0 +1,259 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Merriweather', serif;
+}
+
+body {
+  background: linear-gradient(to bottom, #0b1a26, #142c35);
+  color: #f5f5dc;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* CSS variables for easy theming */
+:root {
+  /* Change this to a different image URL or a local path.
+     Examples:
+       External URL: url('https://example.com/myimage.jpg')
+       Local file:   url('images/hero.jpg')  (place file in `images/` folder)
+  */
+  --hero-bg: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80');
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: rgba(10, 20, 30, 0.85);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.2rem;
+  color: goldenrod;
+}
+
+nav a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: #f5f5dc;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: goldenrod;
+}
+
+/* Hero */
+.hero {
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url('images/backgroundimage.jpg') no-repeat center/cover;
+}
+
+
+.hero-content h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 5rem;
+  color: black;
+  text-shadow: 0 0 8px #f5f5dc;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: black;
+  text-shadow: 0 0 8px white;
+}
+
+
+
+/* Move hero heading/paragraph up slightly for better visual balance */
+.hero-content {
+  transform: translateY(-9vh);
+  transition: transform 0.25s ease;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    transform: translateY(-9vh);
+  }
+}
+
+.btn {
+  padding: 1.2rem 2rem;
+  background-color: white;
+  color: #0b1a26;
+  font-weight: bold;
+  border: 2px solid #d4af37;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: inline-flex;
+  height: 56px;
+  line-height: 56px; /* centers single-line text */
+  padding: 0 2rem;
+  margin-top: 9rem;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* Sections */
+.section {
+  padding: 6rem 5%;
+  text-align: center;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+  transform: translateY(30px);
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Product Grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.product-card {
+  position: relative;
+  background: rgba(20, 44, 53, 0.85);
+  padding: 1rem;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px gold;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Product button that uses an image as its background */
+.product-card a.product-btn {
+  display: block;
+  width: 100%;
+  height: 220px;
+  border-radius: 12px;
+  background-color: rgba(255,255,255,0.03);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.product-card a.product-btn .product-btn-label {
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  transform: translateX(-50%);
+  background: rgba(11,26,38,0.75);
+  color: gold;
+  padding: 0.4rem 0.9rem;
+  border-radius: 18px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.1rem;
+  z-index: 2;
+}
+
+/* Small screens: make product button a bit taller to show image */
+@media (max-width: 480px) {
+  .product-card a.product-btn { height: 260px; }
+}
+
+.product-card h3 {
+  margin-top: 0.8rem;
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.3rem;
+  color: gold;
+}
+
+/* About Section */
+.about-section p {
+  max-width: 800px;
+  margin: 1rem auto;
+  line-height: 1.8;
+}
+
+/* Reviews */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.review-card {
+  background: rgba(20, 44, 53, 0.7);
+  padding: 1.5rem;
+  border-radius: 15px;
+}
+
+.review-card span {
+  display: block;
+  margin-top: 1rem;
+  font-style: italic;
+  color: gold;
+}
+
+/* Newsletter */
+.newsletter-section input[type="email"] {
+  padding: 0.8rem;
+  border-radius: 20px;
+  border: none;
+  width: 250px;
+  margin-right: 1rem;
+}
+
+.newsletter-section button {
+  border-radius: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 2rem 5%;
+  text-align: center;
+  background: rgba(10, 20, 30, 0.85);
+  color: gold;
+  margin-top: 3rem;
+}
+
+/* Canvas sparkles on top layer */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 999;
+}

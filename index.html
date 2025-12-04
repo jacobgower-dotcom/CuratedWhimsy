@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curated Whimsy</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Sparkles canvas -->
+  <canvas id="sparklesCanvas"></canvas>
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1 class="logo">Curated <span>Whimsy</span></h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#collections">Collections</a>
+      <a href="#about">Our Story</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#newsletter">Subscribe</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2>What wonders will find you?</h2>
+      <p>Hand-picked treasures to sprinkle magic into your home and everyday life.</p>
+      <a href="#collections" class="btn">Explore the Magic</a>
+    </div>
+  </section>
+
+  <!-- COLLECTIONS -->
+  <section id="collections" class="fade-in section">
+    <h2>Featured Finds</h2>
+    <div class="grid products-grid">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <a href="https://www.amazon.co.uk/dp/B0F1NC2HJN?ref=nb_sb_ss_w_as-reorder_k0_1_14" target="_blank" rel="noopener noreferrer">
+          <img src="https://images.unsplash.com/photo-1508896694512-0a8f49c59c3c?auto=format&fit=crop&w=500&q=80" alt="Plug-in Candle">
+          <h3>Plug-in Candle</h3>
+        </a>
+      </div>
+      <!-- Product 2 -->
+      <div class="product-card">
+        <a href="https://amzn.eu/d/57dABg8" target="_blank" rel="noopener noreferrer">
+          <!-- Replace this src with a local image `images/flowerlamp.png` -->
+          <img src="images/flowerlamp.png" data-fallback="https://images.unsplash.com/photo-1533639903809-1816c8632226?auto=format&fit=crop&w=500&q=80" alt="Enchanted Lantern">
+          <h3>Enchanted Lantern</h3>
+        </a>
+      </div>
+      <!-- Product 3 -->
+      <div class="product-card">
+        <a href="https://amzn.eu/d/1zOcaRj" target="_blank" rel="noopener noreferrer">
+          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=500&q=80" alt="Fairy Jar Lights">
+          <h3>Fairy Jar Lights</h3>
+        </a>
+      </div>
+      <!-- Product 4 -->
+      <div class="product-card">
+        <a href="https://amzn.eu/d/f4BNF0H" target="_blank" rel="noopener noreferrer">
+          <img src="https://images.unsplash.com/photo-1547462383-37038a3c3c30?auto=format&fit=crop&w=500&q=80" alt="Mystic Rug">
+          <h3>Mystic Forest Rug</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="fade-in section about-section">
+    <h2>Our Story</h2>
+    <p>
+      Curated Whimsy was born from a love of magical corners, cozy nooks, and treasures that awaken wonder.  
+      Inspired by storybook forests, moonlit nights, and whimsical nostalgia, each piece brings a spark of enchantment to your home.
+    </p>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="fade-in section reviews-section">
+    <h2>What People Say</h2>
+    <div class="grid reviews-grid">
+      <div class="review-card">
+        <p>“Absolutely love my fairy jar lights — my living room now feels like an enchanted forest!”</p>
+        <span>- Emily</span>
+      </div>
+      <div class="review-card">
+        <p>“The moonlight lantern is magical. It casts a glow like no other. Highly recommend!”</p>
+        <span>- Sophia</span>
+      </div>
+      <div class="review-card">
+        <p>“Curated Whimsy made my home feel alive with storybook charm. So dreamy!”</p>
+        <span>- Claire</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section id="newsletter" class="fade-in section newsletter-section">
+    <h2>Join the Whimsy ✨</h2>
+    <p>Receive magical finds and whimsical inspiration straight to your inbox.</p>
+    <form class="subscribe-form">
+      <input type="email" placeholder="Your email address" required>
+      <button class="btn">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 Curated Whimsy — Crafted with magic ✨</p>
+    <p>Website contains Amazon product links for application purposes.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
